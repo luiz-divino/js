@@ -1,11 +1,12 @@
-(function(){
-    let sobrenome = prompt('digite seu nome aqui');
-    function criaNome(nome){
-        return nome + ' ' + sobrenome;
+
+function criaPessoa(nome, sobrenome){
+    return {
+        nome, sobrenome,
+        fala: (assunto)=>{
+            return `${nome} está falando sobre ${assunto}`
+        }
     }
-    
-    function falaNome(){
-        console.log(criaNome('nando'))
-    }
-    falaNome()
-})();
+}
+
+const p1 = criaPessoa('luiz', 'divino')
+console.log(p1.fala('a copa do mundo de clubes'))
